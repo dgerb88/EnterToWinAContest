@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Enter_to_Win_a_Contest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AO0-bD-dSf">
+                                <rect key="frame" x="30" y="99" width="333" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To be entered, we need an email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eu3-7g-NSE">
+                                <rect key="frame" x="73.666666666666671" y="70" width="245.66666666666663" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EeF-7s-021">
+                                <rect key="frame" x="157.66666666666666" y="141" width="78" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Submit"/>
+                                <connections>
+                                    <action selector="submitButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m6a-pu-Frd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="AO0-bD-dSf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="9bS-Lj-Dhi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AO0-bD-dSf" secondAttribute="trailing" constant="30" id="B4d-KA-uRW"/>
+                            <constraint firstItem="EeF-7s-021" firstAttribute="top" secondItem="AO0-bD-dSf" secondAttribute="bottom" constant="8" id="Vol-Of-Hjq"/>
+                            <constraint firstItem="EeF-7s-021" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="apA-iH-Snx"/>
+                            <constraint firstItem="AO0-bD-dSf" firstAttribute="top" secondItem="Eu3-7g-NSE" secondAttribute="bottom" constant="8" id="eKg-oB-q33"/>
+                            <constraint firstItem="AO0-bD-dSf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fvS-xk-Ygg"/>
+                            <constraint firstItem="Eu3-7g-NSE" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hK0-KD-seo"/>
+                            <constraint firstItem="Eu3-7g-NSE" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="11" id="tcC-2u-6e5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="AO0-bD-dSf" id="Jti-MX-4Cs"/>
+                        <segue destination="G4h-aM-oBn" kind="show" identifier="paul" id="6ML-3X-kSQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="166" y="4"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="j9P-Dn-VjZ">
+            <objects>
+                <viewController id="G4h-aM-oBn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Itr-xN-7ve">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Congratulations, you entered a contest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S4S-pQ-lig">
+                                <rect key="frame" x="48.666666666666657" y="410.66666666666669" width="296" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3CH-0h-m93"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="S4S-pQ-lig" firstAttribute="centerY" secondItem="Itr-xN-7ve" secondAttribute="centerY" id="FyP-dd-xaR"/>
+                            <constraint firstItem="S4S-pQ-lig" firstAttribute="centerX" secondItem="Itr-xN-7ve" secondAttribute="centerX" id="mDY-PV-xxc"/>
+                            <constraint firstItem="S4S-pQ-lig" firstAttribute="centerX" secondItem="Itr-xN-7ve" secondAttribute="centerX" id="wbA-Y6-fMz"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="PuQ-kH-1S9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x7o-q6-ML9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="848" y="4"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
